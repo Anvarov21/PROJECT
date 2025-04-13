@@ -121,3 +121,41 @@ function pluralizeDays(n) {
 }
 createCalendar(currentYear, currentMonth);
 showMonthsAndDaysSinceWedding();
+
+let nextIndex = 10;
+  let shown = false;
+  let extraCards = [];
+
+  function toggleMore() {
+    const gallery = document.getElementById('gallery');
+    const btn = document.getElementById('moreBtn');
+
+    if (!shown) {
+      // Если ещё не были добавлены, добавляем 3
+      if (extraCards.length === 0) {
+        for (let i = 0; i < 3; i++) {
+          const item = document.createElement('div');
+          item.className = 'card extra';
+          item.textContent = `Картина ${nextIndex}`;
+          item.style.display = 'flex'; // показываем при первом добавлении
+          gallery.appendChild(item);
+          extraCards.push(item);
+          nextIndex++;
+        }
+      } else {
+        // Уже были добавлены — просто показываем
+        extraCards.forEach(card => card.style.display = 'flex');
+      }
+
+      btn.innerHTML = "Скрыть <i class='bx bx-chevron-up'></i>";
+      shown = true;
+    } else {
+      // Скрываем добавленные блоки
+      extraCards.forEach(card => card.style.display = 'none');
+
+      btn.innerHTML = "увидеть больше <i class='bx bx-chevron-down'></i>";
+      shown = false;
+    }
+  }
+  
+  

@@ -38,9 +38,52 @@
       <div id="calendar"></div>
       <div id="monthsPassed"></div>
     </div>
-
   </header>
+  <header class="header3">
+    <h1 class="h11">Галерея</h1>
+  <div class="gallery" id="gallery">
+    <div class="card">Картина 1</div>
+    <div class="card">Картина 2</div>
+    <div class="card">Картина 3</div>
+    <div class="card">Картина 4</div>
+    <div class="card">Картина 5</div>
+    <div class="card">Картина 6</div>
+    <div class="card">Картина 7</div>
+    <div class="card">Картина 8</div>
+    <div class="card">Картина 9</div>
+  </div>
+
+  <div class="more" id="moreBtn" onclick="toggleMore()">увидеть больше<i class='bx bx-chevron-down'></i></div>
+</header>
+<header class="header4">
+  <div style="text-align: center; font-family: sans-serif;">
+    <h3>Банкентный Зал Huvaydo 📍</h3>
+    <p>ул.Хиромий 1А Ташкент, Узбекистан</p>
+    <iframe
+    src="https://yandex.uz/map-widget/v1/?ll=69.205752%2C41.340601&z=16&oid=92649672731"
+    width="100%"
+    height="300"
+    style="border:0; max-width: 600px;"
+    allowfullscreen=""
+    loading="lazy"
+  ></iframe>
+  <div style="margin-top: 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+    <a href="https://yandex.uz/maps/org/92649672731/?ll=69.205752%2C41.340601&z=16" target="_blank">
+      <button style="padding: 10px 15px;">Яндекс Карты</button>
+    </a>
+    <a href="https://www.google.com/maps/search/?api=1&query=41.340601,69.205752" target="_blank">
+      <button style="padding: 10px 15px;">Google Карты</button>
+    </a>
+    <a href="https://2gis.uz/search/41.340601,69.205752" target="_blank">
+      <button style="padding: 10px 15px;">2ГИС</button>
+    </a>
+  </div>
+</div>
+
+</header>
+
   <script src="script.js"></script>
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 </body>
 </html>
