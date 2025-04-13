@@ -1,0 +1,37 @@
+.text-overlay {
+  position: absolute;
+  bottom: 70%;
+  width: 100%;
+  text-align: center;
+  font-size: 6vw;
+  color: #fff5e1;
+  text-shadow: 0 0 10px #00000090;
+  font-style: italic;
+  font-weight: bold;
+}
+.wedding-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+#audioToggle {
+  position: absolute;
+  top: 5vw;
+  right: 5vw;
+  background: transparent;
+  border: none;
+  font-size: 7vw;
+  cursor: pointer;
+  color: white;
+  text-shadow: 0 0 5px black;
+}
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
