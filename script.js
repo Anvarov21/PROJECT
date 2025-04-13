@@ -9,7 +9,7 @@ window.addEventListener("click", () => {
 
 button.addEventListener("click", () => {
   audio.muted = !audio.muted;
-  button.textContent = audio.muted ? "🔇" : "🎵";
+  button.innerHTML = audio.muted ? "<box-icon name='volume-mute' ></box-icon>" : "<box-icon name='music' type='solid' ></box-icon>";
 });
 
 let currentYear = new Date().getFullYear();

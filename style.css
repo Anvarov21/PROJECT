@@ -41,8 +41,8 @@ body, html {
 
 #audioToggle {
   position: absolute;
-  top: 4vw;
-  right: 4vw;
+  top: 50px;
+  right: 40px;
   background: transparent;
   border: none;
   font-size: 7vw;
