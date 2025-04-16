@@ -1,4 +1,4 @@
-* {
+/* * { без адаптива
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -174,4 +174,185 @@ h1 {
   width: 430px;
   height: 500px;
   overflow: hidden;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+}
+
+header {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.header1, .header2, .header3, .header4 {
+  padding: 20px;
+}
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 70%;
+  width: 100%;
+  text-align: center;
+  font-size: 6vw;
+  color: #fff5e1;
+  text-shadow: 0 0 10px #00000090;
+  font-style: italic;
+  font-weight: bold;
+}
+
+#audioToggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 8vw;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 5vw;
+  color: white;
+  text-shadow: 0 0 3px #000;
+  text-align: center;
+}
+
+h1 {
+  font-size: 8vw;
+  margin-bottom: 10px;
+}
+
+.quote, .parents, .info {
+  font-size: 4vw;
+  margin-top: 3vw;
+}
+
+#calendar {
+  background-color: rgba(255,255,255,0.9);
+  color: black;
+  border-radius: 10px;
+  padding: 4vw;
+  font-size: 4vw;
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.calendar-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.calendar-table th, .calendar-table td {
+  padding: 2vw;
+  text-align: center;
+}
+
+.months-box {
+  background-color: #ffecec;
+  color: #d33;
+  text-align: center;
+  padding: 1em;
+  margin: 1em auto;
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+.header3 .h11 {
+  text-align: center;
+  color: green;
+  font-size: 6vw;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+  margin: 0 auto;
+  padding: 10px;
+  max-width: 900px;
+}
+
+.card {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4vw;
+  font-weight: bold;
+}
+
+.more {
+  margin-top: 20px;
+  font-size: 4vw;
+  text-align: center;
+}
+
+.header4 {
+  text-align: center;
+  padding: 20px;
+}
+
+iframe {
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  border: 0;
+}
+
+.header4 button {
+  padding: 10px 15px;
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .text-overlay {
+    font-size: 3vw;
+  }
+
+  h1 {
+    font-size: 4vw;
+  }
+
+  .quote, .parents, .info, #calendar {
+    font-size: 2vw;
+  }
+
+  .card {
+    font-size: 2vw;
+  }
+
+  .more {
+    font-size: 1.2rem;
+  }
+
+  #audioToggle {
+    font-size: 2rem;
+  }
 }
