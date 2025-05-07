@@ -1,4 +1,4 @@
-/* * { без адаптива
+ /* * { 
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -174,8 +174,23 @@ h1 {
   width: 430px;
   height: 500px;
   overflow: hidden;
+} 
+.knopki{
+  background-color: rgb(255, 255, 255);
+  border-color: black;
+  border-radius: 15px;
+  box-shadow: #444;
+}
+.knopki:hover{
+  background-color: rgb(218, 215, 215);
+  border-color:  #000000;
+  border-radius: 15px;
+  box-shadow: #4b4b4b;
+  border-style:double;
 } */
 
+
+/* Общие настройки */
 * {
   margin: 0;
   padding: 0;
@@ -189,15 +204,12 @@ body, html {
   background-color: #fff;
 }
 
-header {
-  width: 100%;
-  max-width: 100%;
-  overflow: hidden;
+/* Header 1 */
+.header1 {
   position: relative;
-}
-
-.header1, .header2, .header3, .header4 {
-  padding: 20px;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .bg-image {
@@ -205,9 +217,8 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   object-fit: cover;
-  z-index: -1;
 }
 
 .text-overlay {
@@ -215,7 +226,7 @@ header {
   bottom: 70%;
   width: 100%;
   text-align: center;
-  font-size: 6vw;
+  font-size: 5vw;
   color: #fff5e1;
   text-shadow: 0 0 10px #00000090;
   font-style: italic;
@@ -224,8 +235,8 @@ header {
 
 #audioToggle {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 2vw;
+  right: 2vw;
   background: transparent;
   border: none;
   font-size: 8vw;
@@ -233,126 +244,111 @@ header {
   z-index: 2;
 }
 
-.content {
-  max-width: 600px;
-  margin: 0 auto;
+/* Header 2 */
+.header2 {
+  position: relative;
+  width: 100%;
   padding: 5vw;
+  background: linear-gradient(#2c3e50, #34495e);
   color: white;
-  text-shadow: 0 0 3px #000;
+}
+
+.content {
+  max-width: 900px;
+  margin: auto;
   text-align: center;
 }
 
 h1 {
   font-size: 8vw;
-  margin-bottom: 10px;
 }
 
 .quote, .parents, .info {
   font-size: 4vw;
-  margin-top: 3vw;
+  margin-top: 2vw;
 }
 
 #calendar {
-  background-color: rgba(255,255,255,0.9);
+  background-color: rgba(255, 255, 255, 0.9);
   color: black;
   border-radius: 10px;
+  margin-top: 5vw;
   padding: 4vw;
-  font-size: 4vw;
-  margin-top: 20px;
-  overflow-x: auto;
+  font-size: 3.5vw;
 }
 
-.calendar-table {
+/* Галерея */
+.header3 {
   width: 100%;
-  border-collapse: collapse;
-}
-
-.calendar-table th, .calendar-table td {
-  padding: 2vw;
-  text-align: center;
-}
-
-.months-box {
-  background-color: #ffecec;
-  color: #d33;
-  text-align: center;
-  padding: 1em;
-  margin: 1em auto;
-  max-width: 300px;
-  border-radius: 10px;
-}
-
-.header3 .h11 {
-  text-align: center;
-  color: green;
-  font-size: 6vw;
+  padding: 4vw;
 }
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 10px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 10px;
-  max-width: 900px;
 }
 
 .card {
   background-color: #f0f0f0;
   border: 1px solid #ccc;
-  aspect-ratio: 1 / 1;
+  height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 4vw;
+  font-size: 3.5vw;
   font-weight: bold;
 }
 
 .more {
   margin-top: 20px;
   font-size: 4vw;
+  color: #000;
   text-align: center;
+  cursor: pointer;
 }
 
+/* Карта и кнопки */
 .header4 {
+  padding: 4vw;
   text-align: center;
-  padding: 20px;
 }
 
 iframe {
   width: 100%;
   max-width: 600px;
   height: 300px;
-  border: 0;
+  border: none;
 }
 
-.header4 button {
-  padding: 10px 15px;
-  font-size: 1rem;
+.knopki {
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
 }
 
+.knopki:hover {
+  background-color: #e0e0e0;
+  border-style: double;
+}
+
+/* 📱 Media Queries */
 @media (min-width: 768px) {
-  .text-overlay {
-    font-size: 3vw;
-  }
-
   h1 {
     font-size: 4vw;
   }
-
-  .quote, .parents, .info, #calendar {
+  .quote, .parents, .info {
     font-size: 2vw;
   }
-
   .card {
-    font-size: 2vw;
+    font-size: 1.5vw;
   }
-
   .more {
-    font-size: 1.2rem;
-  }
-
-  #audioToggle {
-    font-size: 2rem;
+    font-size: 1.2vw;
   }
 }
